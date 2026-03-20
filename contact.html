@@ -11,13 +11,12 @@
             padding: 0 20px;
             background: #f7f7f7;
         }
-        /* ロゴを中央に大きく配置 */
         .logo-area {
             text-align: center;
             margin-bottom: 40px;
         }
         .logo-area img {
-            max-width: 260px; /* ロゴの大きさ（必要なら調整） */
+            max-width: 260px;
             height: auto;
         }
         h2 {
@@ -55,15 +54,12 @@
 </head>
 <body>
 
-<!-- ▼ ロゴを中央に表示する部分 ▼ -->
 <div class="logo-area">
     <img src="スクリーンショット 2026-02-14 211901.png" alt="上伸塾ロゴ">
 </div>
-<!-- ▲ ロゴここまで ▲ -->
 
 <h2>お問い合わせフォーム</h2>
 
-<!-- ▼ Formspree に送信するフォーム ▼ -->
 <form action="https://formspree.io/f/mreyjnqr" method="POST">
 
     <label>お名前</label>
@@ -77,6 +73,18 @@
 
     <label>お問い合わせ内容</label>
     <textarea name="message" rows="6" required></textarea>
+
+    <!-- ▼ 個人情報保護方針の同意チェック ▼ -->
+    <label style="display:flex; align-items:center; gap:8px; margin-bottom:20px;">
+        <input type="checkbox" name="privacy" required>
+        <span>
+            <a href="https://www.joshin-juku.com/個人情報について" target="_blank">
+                個人情報保護方針
+            </a>
+            に同意します
+        </span>
+    </label>
+    <!-- ▲ ここまで ▲ -->
 
     <div class="center">
         <button type="submit">送信する</button>
