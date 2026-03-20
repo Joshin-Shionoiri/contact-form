@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせフォーム</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background: #f7f7f7;
+        }
+        /* ロゴを中央に大きく配置 */
+        .logo-area {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo-area img {
+            max-width: 260px; /* ロゴの大きさ（必要なら調整） */
+            height: auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        label {
+            font-weight: 600;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            background: #fff;
+        }
+        button {
+            background: #1a73e8;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ▼ ロゴを中央に表示する部分 ▼ -->
+<div class="logo-area">
+    <img src="スクリーンショット 2026-02-14 211901.png" alt="上伸塾ロゴ">
+</div>
+<!-- ▲ ロゴここまで ▲ -->
+
+<h2>お問い合わせフォーム</h2>
+
+<!-- ▼ Formspree に送信するフォーム ▼ -->
+<form action="https://formspree.io/f/mreyjnqr" method="POST">
+
+    <label>お名前</label>
+    <input type="text" name="name" required>
+
+    <label>メールアドレス</label>
+    <input type="email" name="_replyto" required>
+
+    <label>件名</label>
+    <input type="text" name="subject">
+
+    <label>お問い合わせ内容</label>
+    <textarea name="message" rows="6" required></textarea>
+
+    <div class="center">
+        <button type="submit">送信する</button>
+    </div>
+
+</form>
+
+</body>
+</html>
